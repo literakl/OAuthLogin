@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>OAuthLogin</artifactId>
+        <groupId>cz.literak.oauth</groupId>
+        <version>${project.version}</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>OAuthLoginEJB</artifactId>
+    <version>${project.version}</version>
+    <packaging>ejb</packaging>
+
+    <name>OAuthLoginEJB Beans</name>
+
+    <dependencies>
+        <dependency>
+        	<groupId>com.eclipsesource.minimal-json</groupId>
+        	<artifactId>minimal-json</artifactId>
+        	<version>0.9.1</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.nimbusds</groupId>
+        	<artifactId>nimbus-jose-jwt</artifactId>
+        	<version>2.22.1</version>
+        </dependency>
+    </dependencies>
+
+    <!--<repositories>-->
+        <!--<repository> &lt;!&ndash; for javaee:javaee-api &ndash;&gt;-->
+            <!--<id>java.net2</id>-->
+            <!--<url>http://download.java.net/maven/2/</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <ejbVersion>3.0</ejbVersion>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

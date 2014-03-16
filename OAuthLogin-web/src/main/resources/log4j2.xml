@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30" strict="true">
+    <!-- http://logging.apache.org/log4j/2.x/manual/configuration.html -->
+    <!--http://logging.apache.org/log4j/2.x/manual/configuration.html#PropertySubstitution-->
+    <Properties>
+        <Property name="oauthLoginLogPath">c:/dev/oauth2.log</Property>
+    </Properties>
+
+    <Appenders>
+        <Appender type="File" name="File" fileName="${sys:oauthLoginLogPath}" immediateFlush="true">
+            <Layout type="PatternLayout">
+                <Pattern>%d %p %C{1.} %m%n</Pattern>
+                <!--<PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+            </Layout>
+        </Appender>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="cz.literak.demo" level="debug" additivity="false">
+            <AppenderRef ref="File"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

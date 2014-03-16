@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>OAuthLogin</artifactId>
+        <groupId>cz.literak.oauth</groupId>
+        <version>${project.version}</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>OAuthLoginWEB</artifactId>
+    <packaging>war</packaging>
+    <name>OAuthLogin Webapp</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>cz.literak.oauth</groupId>
+            <artifactId>OAuthLogin-ejb</artifactId>
+            <version>${project.version}</version>
+            <type>ejb</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>OAuthLoginWEB</finalName>
+    </build>
+</project>
