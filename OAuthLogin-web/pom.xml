@@ -5,7 +5,7 @@
     <parent>
         <artifactId>OAuthLogin</artifactId>
         <groupId>cz.literak.oauth</groupId>
-        <version>${project.version}</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>cz.literak.oauth</groupId>
-            <artifactId>OAuthLogin-ejb</artifactId>
+            <artifactId>OAuthLoginEJB</artifactId>
             <version>${project.version}</version>
             <type>ejb</type>
         </dependency>
