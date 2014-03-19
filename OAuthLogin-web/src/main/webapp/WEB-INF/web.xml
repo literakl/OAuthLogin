@@ -9,11 +9,11 @@
     </context-param>
     <context-param>
         <param-name>twitter.api.key</param-name>
-        <param-value>REPLACE</param-value>
+        <param-value>${twitter.api.key}</param-value>
     </context-param>
     <context-param>
         <param-name>twitter.api.secret</param-name>
-        <param-value>REPLACE</param-value>
+        <param-value>${twitter.api.secret}</param-value>
     </context-param>
     <context-param>
         <param-name>twitter.key</param-name>
@@ -25,11 +25,11 @@
     </context-param>
     <context-param>
         <param-name>facebook.api.key</param-name>
-        <param-value>REPLACE</param-value>
+        <param-value>${facebook.api.key}</param-value>
     </context-param>
     <context-param>
         <param-name>facebook.api.secret</param-name>
-        <param-value>REPLACE</param-value>
+        <param-value>${facebook.api.secret}</param-value>
     </context-param>
     <context-param>
         <param-name>facebook.key</param-name>
@@ -41,11 +41,11 @@
     </context-param>
     <context-param>
         <param-name>google.api.key</param-name>
-        <param-value>REPLACE</param-value>
+        <param-value>${google.api.key}</param-value>
     </context-param>
     <context-param>
         <param-name>google.api.secret</param-name>
-        <param-value>REPLACE</param-value>
+        <param-value>${google.api.secret}</param-value>
     </context-param>
     <context-param>
         <param-name>google.key</param-name>
@@ -58,25 +58,25 @@
 
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>cz.literak.demo.oauth.servlets.LogoutServlet</servlet-class>
+        <servlet-class>cz.literak.oauth.servlets.LogoutServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>OAuthHandshake</servlet-name>
-        <servlet-class>cz.literak.demo.oauth.servlets.OAuthHandshakeServlet</servlet-class>
+        <servlet-class>cz.literak.oauth.servlets.OAuthHandshakeServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FindUserJson</servlet-name>
-        <servlet-class>cz.literak.demo.oauth.servlets.FindExistingUserServlet</servlet-class>
+        <servlet-class>cz.literak.oauth.servlets.FindExistingUserServlet</servlet-class>
     </servlet>
     <servlet>
         <!--suppress ServletWithoutMappingInspection -->
         <servlet-name>InitServlet</servlet-name>
-        <servlet-class>cz.literak.demo.oauth.servlets.InitServlet</servlet-class>
+        <servlet-class>cz.literak.oauth.servlets.InitServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>OAuthCallback</servlet-name>
-        <servlet-class>cz.literak.demo.oauth.servlets.OAuthCallbackServlet</servlet-class>
+        <servlet-class>cz.literak.oauth.servlets.OAuthCallbackServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
