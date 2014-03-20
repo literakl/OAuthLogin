@@ -45,7 +45,7 @@
     </profiles>
 
     <build>
-        <finalName>OAuthLoginWEB</finalName>
+        <finalName>OAuthLogin</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>

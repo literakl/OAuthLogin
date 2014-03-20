@@ -25,8 +25,19 @@
     </p>
 
     <p>
-        Sources will be released soon under MIT license.
+        Source codes are released under MIT license. You can download preliminary version of
+        <a href="https://github.com/literakl/OAuthLogin">OAuthLogin on GitHub</a>. The skeleton
+        consists of two Maven modules: OAuthLogin-ejb that performs OAuth authentication and database
+        operations (JPA) and OAuthLogin-web that contains frontend (jsp as view, servlets as controller).
+        I use following libraries:
     </p>
+
+    <ul>
+        <li><a href="https://github.com/hhru/subscribe">Subscribe</a> (successor of popular Scribe)</li>
+        <li><a href="https://github.com/ralfstx/minimal-json">minimal-json</a> nice library for parsing JSON</li>
+        <li><a href="https://bitbucket.org/nimbusds/nimbus-jose-jwt/wiki/Home">nimbus-jose-jwt</a> easy to use library for parsing JWT tokens</li>
+        <li><a href="http://logging.apache.org/log4j/2.x/">log4j2</a> famous logging framework</li>
+    </ul>
 
     <p>
         Discussion: <a href="discuss.jsp#disqus_thread">Discussion</a>
@@ -35,6 +46,8 @@
     <h3>Changelog</h3>
 
     <ul>
+        <li>19.3.2014 - Fixed build after package refactoring</li>
+        <li>16.3.2014 - Mavenized, shared on GitHub</li>
         <li>6.3.2014 - Refactor common code to custom JSP tag</li>
         <li>6.3.2014 - Discussion added</li>
         <li>2.3.2014 - Beta version: deleted existing users for another test round (sorry)</li>
