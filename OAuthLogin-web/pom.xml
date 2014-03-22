@@ -24,7 +24,7 @@
 
     <profiles>
         <profile>
-            <id>local</id>
+            <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -35,7 +35,7 @@
             </build>
         </profile>
         <profile>
-            <id>blog</id>
+            <id>production</id>
             <build>
                 <filters>
                     <filter>src/main/filters/config-blog.properties</filter>
@@ -66,17 +66,8 @@
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>1.0.1.Final</version>
                 <configuration>
-                    <jboss-home>c:\dev\wildfly8\</jboss-home>
+                    <jboss-home>${wildfly-home}</jboss-home>
                 </configuration>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>run</goal>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -87,7 +78,6 @@
                         <resource>
                             <filtering>true</filtering>
                             <directory>src/main/webapp</directory>
-                            <!--<targetPath>WEB-INF</targetPath>-->
                             <includes>
                                 <include>**/web.xml</include>
                             </includes>
