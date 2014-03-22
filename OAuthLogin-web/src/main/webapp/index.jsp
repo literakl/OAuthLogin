@@ -46,6 +46,7 @@
     <h3>Changelog</h3>
 
     <ul>
+        <li>22.3.2014 - Fixed Google provider, grant type is mandatory</li>
         <li>19.3.2014 - Fixed build after package refactoring</li>
         <li>16.3.2014 - Mavenized, shared on GitHub</li>
         <li>6.3.2014 - Refactor common code to custom JSP tag</li>
