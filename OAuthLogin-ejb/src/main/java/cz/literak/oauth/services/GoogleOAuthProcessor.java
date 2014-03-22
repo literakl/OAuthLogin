@@ -126,6 +126,7 @@ public class GoogleOAuthProcessor extends GenericOAuthProcessor implements IOAut
                     .apiKey(provider.apiKey)
                     .apiSecret(provider.apiSecret)
                     .scope("openid profile email")
+                    .grantType("authorization_code")
 //                    .state(secret) TODO uncomment when subscribe 2.1 is releases
                     // Google checks if callback URL is registered in app settings
                     .callback(getCallbackUrl(request, provider.uriKey))
